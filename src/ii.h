@@ -161,6 +161,7 @@
 #define II_KR_CLK       11
 #define II_KR_PAGE      12
 #define II_KR_CUE       13
+#define II_KR_DIR       14
 
 #define II_MP_PRESET    0
 #define II_MP_RESET     1
@@ -182,6 +183,7 @@
 #define II_CY_POS       2
 #define II_CY_REV       3
 #define II_CY_CV        4
+
 
 #define JF_TR       1
 #define JF_RMODE    2
