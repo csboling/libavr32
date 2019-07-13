@@ -409,7 +409,15 @@ void monome_ring_enc_parse_event_data(u32 data, u8* n, s8* val) {
 
 // ring press/lift
 static inline void monome_ring_key_write_event( u8 n, u8 val) {
-  // TODO
+  s32* data = (s32*)&ev.data;
+  if (n == 0) {
+    *data = val;
+  }
+  else if (n == 1) {
+    *data = val << 1;
+  }
+  ev.type = kEventKey;
+  event_post(&ev);
 }
 void monome_ring_key_parse_event_data(u32 data, u8* n, u8* val) {
   // TODO
